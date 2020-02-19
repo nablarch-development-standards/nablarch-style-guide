@@ -33,6 +33,8 @@
 - [Indentation](#indentation)
 - [InnerAssignment](#innerassignment)
 - [InterfaceTypeParameterName](#interfacetypeparametername)
+- [MissingJavadocType](#missingjavadoctype)
+- [MissingJavadocMethod](#missingjavadocmethod)
 - [JavadocMethod](#javadocmethod)
 - [JavadocType](#javadoctype)
 - [JavadocVariable](#javadocvariable)
