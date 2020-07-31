@@ -87,9 +87,9 @@ Though these conventions include some items that are based on [Nablarch Applicat
 
 For the code covered under these conventions, it is assumed that the following three actions have been implemented:
 
-- Formatted using code formatter [Java code formatter](./code-formatter.md)）
-- Violations of the conventions that can be detected mechanically by Checkstyle are resolved [Checkstyle Guide](./staticanalysis/checkstyle/README.md)）
-- The code that is evidently problematic and that is likely to cause problems later is eliminated using SpotBugs（[SpotBugs Guide](./staticanalysis/spotbugs/README.md)）
+- Formatted using code formatter [Java code formatter](./code-formatter.md)
+- Violations of the conventions that can be detected mechanically by Checkstyle are resolved [Checkstyle Guide](./staticanalysis/checkstyle/README.md)
+- The code that is evidently problematic and that is likely to cause problems later is eliminated using SpotBugs [SpotBugs Guide](./staticanalysis/spotbugs/README.md)
 
 Anything that can be handled mechanically is implemented in advance, and these conventions serve as a guide for writing better code, or as code review guidelines.
 
