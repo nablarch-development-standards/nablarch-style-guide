@@ -54,7 +54,7 @@ The check can be performed with the following command.
 mvn checkstyle:check
 ```
 
-If there is a check violation, the following points are output to the console:
+If there is a check violation, the following points are output to the console.
 
 ```
 [INFO] --- maven-checkstyle-plugin:3.0.0:check (default-cli) @ checkstyle-example ---
@@ -62,7 +62,7 @@ If there is a check violation, the following points are output to the console:
 [ERROR] src\main\java\com\example\App.java:[9,5] (javadoc) JavadocMethod: Javadoc コメントがありません。
 ```
 
-If all checks are passed, only one line is output to the console:
+If all checks are passed, only one line is output to the console.
 
 ```
 [INFO] --- maven-checkstyle-plugin:3.0.0:check (default-cli) @ checkstyle-example ---

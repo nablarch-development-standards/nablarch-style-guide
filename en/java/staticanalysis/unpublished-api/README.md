@@ -15,7 +15,7 @@ As the specification of the authorized API is described with whitelist format in
 Authorized APIs are specified in the configuration file. 
 The configuration file description method will be described later.
 
-Calls to APIs other than the authorized API are checked according to the following rules.。
+Calls to APIs other than the authorized API are checked according to the following rules.
 
 - Reference to unauthorized classes (instantiation, call of class method)
 - Calling unauthorized methods

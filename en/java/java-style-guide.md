@@ -8,9 +8,9 @@
   - [1.3.Java version](#no1-3)
   - [1.4.Notation rules](#no1-4)
 - [2.Package structure](#no2)
-  - [2.1.Structure the package according to the stereotype in the architecture design](#no2-1)
+  - [2.1.Structure the package according to the stereotype in the system design](#no2-1)
 - [3.Naming](#no3)
-  - [3.1.Class names are nouns and name according to stereotype in the architecture design depending on the requirement](#no3-1)
+  - [3.1.Class names are nouns and name according to stereotype in the system design depending on the requirement](#no3-1)
   - [3.2.Name the method names starting with a verb](#no3-2)
   - [3.3.Name the variables with nouns](#no3-3)
   - [3.4.Name using the glossary of the data model](#no3-4)
@@ -19,7 +19,7 @@
   - [4.2.Write Javadoc comments of Field](#no4-2)
   - [4.3.Write Javadoc comments of Method](#no4-3)
   - [4.4.Provide row comments as required to help understand the code](#no4-4)
-- [5.Prohibited items](#no5)
+- [5.Important notes](#no5)
   - [5.1.Do not increment/decrement in the middle of a calculation formula](#no5-1)
   - [5.2.Do not use fields as temporary variables](#no5-2)
   - [5.3.Do not define fields in the subclass with the same name as that of the super class](#no5-3)
@@ -30,7 +30,7 @@
   - [5.8.Exception class must not be created at the discretion of the application programmer](#no5-8)
   - [5.9.Do not generate and throw instance of java.lang.Exception class](#no5-9)
   - [5.10.Do not use try-catch statement for conditional branching](#no5-10)
-  - [5.11.Note that hidden information is not displayed in log and serialize](#no5-11)
+  - [5.11.Make sure that confidential information is not logged or serialized](#no5-11)
   - [5.12.Do not use legacy API in Java standard library](#no5-12)
   - [5.13.Do not use reflection directly](#no5-13)
   - [5.14.Do not leave the class in an inconsistent state](#no5-14)
@@ -53,10 +53,10 @@
   - [6.14.Check the external input values using common part](#no6-14)
   - [6.15.Use common parts class for file I/O](#no6-15)
   - [6.16.Use try-with-resources syntax when resources are required to be closed](#no6-16)
-  - [6.17.Code the exceptions processing consistently according to architecture design of the project](#no6-17)
+  - [6.17.Code the exceptions processing consistently according to system design of the project](#no6-17)
   - [6.18.Loop nesting should be up to double if possible](#no6-18)
 - [7.Recommendations](#no7)
-  - [7.1.Provide appropriate access modifier in the class and method](#no7-1)
+  - [7.1.Provide appropriate access modifier in the class, method, etc](#no7-1)
   - [7.2.As a general rule, make instance variable private](#no7-2)
   - [7.3.Use local variables by narrowing down the scope as far as possible](#no7-3)
   - [7.4.Avoid re-assignment as far as possible and use final](#no7-4)
@@ -87,9 +87,9 @@ Though these conventions include some items that are based on [Nablarch Applicat
 
 For the code covered under these conventions, it is assumed that the following three actions have been implemented:
 
-- Formatted using code formatter [Java code formatter](./code-formatter.md)
-- Violations of the conventions that can be detected mechanically by Checkstyle are resolved [Checkstyle Guide](./staticanalysis/checkstyle/README.md)
-- The code that is evidently problematic and that is likely to cause problems later is eliminated using SpotBugs [SpotBugs Guide](./staticanalysis/spotbugs/README.md)
+- Formatted using code formatter [Java code formatter](./code-formatter.md)）
+- Violations of the conventions that can be detected mechanically by Checkstyle are resolved [Checkstyle Guide](./staticanalysis/checkstyle/README.md)）
+- The code that is evidently problematic and that is likely to cause problems later is eliminated using SpotBugs（[SpotBugs Guide](./staticanalysis/spotbugs/README.md)）
 
 Anything that can be handled mechanically is implemented in advance, and these conventions serve as a guide for writing better code, or as code review guidelines.
 
@@ -199,9 +199,9 @@ Some code examples showing "prohibited code" do not conform to the conventions.
 
 These are the conventions for application package structure.
 
-### <a name="no2-1">2.1.Configure the package according to the stereotype in the architecture design</a>
+### <a name="no2-1">2.1. Structure the package according to the stereotype in the system design</a>
 
-In a business application, configure the package in accordance with the stereotypes for architecture design.
+In a business application, structure the package in accordance with the stereotypes for system design.
 
 A simple example of package name is shown.
 
@@ -219,7 +219,7 @@ A simple example of package name is shown.
 
 These are the conventions for naming classes, methods and variables.
 
-### <a name="no3-1">3.1.Class names are nouns and name according to stereotype in the architecture design depending on the requirement</a>
+### <a name="no3-1">3.1.Class names are nouns and name according to stereotype in the system design depending on the requirement</a>
 
 Basically, a noun is used for Class name.
 
@@ -232,7 +232,7 @@ Even in Java standard API, many interfaces with such names are included.
 - `java.lang.Iterable`
 - `java.lang.Runnable`
 
-Classes that are created in a business application often have roles in accordance with the stereotypes for architecture design.
+Classes that are created in a business application often have roles in accordance with the stereotypes for system design.
 Hence, when naming the classes, add suffixes etc. making it evident that the classes correspond to the stereotypes.
 
 |Role|Naming rule|
@@ -414,9 +414,9 @@ Write comments as single line comments starting with `//`.
 
 ---
 
-## <a name="no5">5.Prohibited items</a>
+## <a name="no5">5.Important notes</a>
 
-Prohibited items are provided to reduce risky code that may cause bugs.
+Important notes are provided to reduce risky code that may cause bugs.
 
 ### <a name="no5-1">5.1.Do not increment/decrement in the middle of a calculation formula</a>
 
@@ -759,7 +759,7 @@ if (service.exists(code)) {
 }
 ```
 
-### <a name="no5-11">5.11.Note that confidential information is not displayed in log and serialize</a>
+### <a name="no5-11">5.11.Make sure that confidential information is not logged or serialized</a>
 
 Be careful to mask confidential information such as password, so that the information is not included in the log.
 
@@ -936,17 +936,17 @@ In this case, it is good idea not to define it as a constant.
 
 ---
 
-## <a name="no6">6.Prohibited items</a>
+## <a name="no6">6.Important notes</a>
 
 Although not prohibited, there are items provided that programmers should pay careful attention to for preventing bugs and a negative impact on maintainability.
 
 ### <a name="no6-1">6.1.Do not implement processes that cannot be understood from the name in the method</a>
 
-When a process that cannot be guessed from the method name is implemented, the user of that method will be confused.
+When a process that cannot be understood from the method name is implemented, the user of that method will be confused.
 
 ```java
 //Not Okay
-//From the method name, though it can be guessed that it is a process "to get unread notification",
+//From the method name, though it can be understood that it is a process "to get unread notification",
 //in reality, "update to read status" is also being implemented.
 private List<Notification> findUnreadNotifications() {
     final List<Notification> notifications = dao.findUnreadNotifications();
@@ -963,7 +963,7 @@ private List<Notification> findUnreadNotifications() {
 
 ```java
 //OK
-//As can be guessed from the method name, the process to 'get unread notification' is being implemented
+//As can be understood from the method name, the process to 'get unread notification' is being implemented
 private List<Notification> findUnreadNotifications() {
     return dao.findUnreadNotifications();
 }
@@ -1333,10 +1333,10 @@ try (final InputStream in = openStream()) {
 }
 ```
 
-### <a name="no6-17">6.17.Code the exceptions processing consistently according to architecture design of the project</a>
+### <a name="no6-17">6.17.Code the exceptions processing consistently according to system design of the project</a>
 
 Having a consistent exception processing method in the project is important.
-Perform coding consistently in accordance with the architecture design of the project.
+Perform coding consistently in accordance with the system design of the project.
 
 ### <a name="no6-18">6.18.Loop nesting should be up to double if possible</a>
 
@@ -1349,7 +1349,7 @@ Although this index is not absolute as readability is subjective, loop nesting i
 
 Some recommendations have been stipulated to write better code.
 
-### <a name="no7-1">7.1.Provide appropriate access modifier in the class and method</a>
+### <a name="no7-1">7.1. Provide appropriate access modifier in the class, method, etc.</a>
 
 Select appropriate access modifiers such as classes and methods where access modifiers can be provided.
 
@@ -1554,7 +1554,7 @@ if (value == null) {
 
 ### <a name="no7-7">7.7.Bind the appropriate type when using the class that captures type parameters such as collection</a>
 
-Collection parameters such as `java.util.List<E>` and `java.util.Map<K, V>` and `java.util.Optional<T>` have type parameters defined.
+Collection arguments such as `java.util.List<E>` and `java.util.Map<K, V>` and `java.util.Optional<T>` have type parameters defined.
 When using such classes, bind the appropriate type.
 
 By binding the appropriate type, advantage of type checking by the compiler can be utilized.
@@ -1597,7 +1597,7 @@ For other methods, check [`java.util.stream.Stream`のJavadoc](https://docs.orac
 A code example that uses Stream API and a code example that uses the extended for statement are shown below.
 In both cases, the average age is calculated from the list of employees by narrowing the list down to only those employees whose job type is programmer.
 
-It is easier to understand what kind of process a code example using the Stream API is stacking to obtain the result.
+It is easier to understand what kind of process is stacked to obtain the result in the code example using the Stream API.
 
 ```java
 //Code example that uses the Stream API

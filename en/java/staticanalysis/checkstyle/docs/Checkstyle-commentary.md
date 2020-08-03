@@ -5,7 +5,7 @@ In this section, you will learn about the Checkstyle rules described in the conf
 The following terms are used in this section.
 
 - OK: It indicates that you have complied with the CheckyStyle rules described in the configuration file.
-- NG: It indicates that you have not complied with the CheckyStyle rules described in the configuration file. The importance of the rule (error, warning, etc.) does not matter.
+- Not OK: It indicates that you have not complied with the CheckyStyle rules described in the configuration file. The importance of the rule (error, warning, etc.) does not matter.
 
 The table of contents is given below.
 
@@ -127,7 +127,7 @@ If `*` is used in the `import` statement, even classes that are not originally u
 Therefore, if there are changes or additions to the package being `imported`, the names will be more likely to clash.
 
 ```java
-// 実際はListとArrayListしか使っていないのにjava.utilパッケージをまるごとimportしている（NG）。
+// Although only List and ArrayList are used, the whole java.util package is imported (Not OK).
 import java.util.*;
 
     ///// omitted /////
