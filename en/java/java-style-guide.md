@@ -1579,7 +1579,7 @@ final Item item = ...
 items.add(item); //Passes through compile as it matches the bind type
 ```
 
-### <a name="no7-8">7.8.Consider writing the collection operations concisely using the Stream AP</a>
+### <a name="no7-8">7.8.Consider writing the collection operations concisely using the Stream API</a>
 
 In some cases, it is possible to process collections such as `java.util.List` or `java.util.Set` with simple code using the Stream API introduced in Java 8.
 
