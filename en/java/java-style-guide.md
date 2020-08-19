@@ -87,9 +87,9 @@ Though these conventions include some items that are based on [Nablarch Applicat
 
 For the code covered under these conventions, it is assumed that the following three actions have been implemented:
 
-- Formatted using code formatter [Java code formatter](./code-formatter.md)）
-- Violations of the conventions that can be detected mechanically by Checkstyle are resolved [Checkstyle Guide](./staticanalysis/checkstyle/README.md)）
-- The code that is evidently problematic and that is likely to cause problems later is eliminated using SpotBugs（[SpotBugs Guide](./staticanalysis/spotbugs/README.md)）
+- Formatted using code formatter ([Java code formatter](./code-formatter.md))
+- Violations of the conventions that can be detected mechanically by Checkstyle are resolved ([Checkstyle Guide](./staticanalysis/checkstyle/README.md))
+- The code that is evidently problematic and that is likely to cause problems later is eliminated using SpotBugs ([SpotBugs Guide](./staticanalysis/spotbugs/README.md))
 
 Anything that can be handled mechanically is implemented in advance, and these conventions serve as a guide for writing better code, or as code review guidelines.
 
@@ -511,7 +511,7 @@ public class SubClass extends SuperClass {
 }
 ```
 
-### <a name="no5-4">5.4.Do not return null if the return value is a collection or an array</a>
+### <a name="no5-4">5.4.Do not return `null` if the return value is a collection or an array</a>
 
 To indicate a state of no value, `null` may be used, however, if the return value is a collection or an array, as shown below, do not return `null` even to indicate a state of no value.
 
@@ -662,7 +662,7 @@ However, if it is required to write a very long process inside the constructor, 
 - Perform the process prior to calling the constructor and pass its result in the argument of the constructor.
 - Inside the constructor, delegate the process to a separate class and use its result.
 
-### <a name="no5-6">5.6.Do not call the static method by using the variable that stored the instance as a receiver</a>
+### <a name="no5-6">5.6.Do not call the `static` method by using the variable that stored the instance as a receiver</a>
 
 Usually, `static` methods are called by writing code with class name as a receiver.
 
@@ -681,7 +681,7 @@ final int value = ...
 return String.valueOf(value);
 ```
 
-### <a name="no5-7">5.7.Do not refer to static variable that stores the instance as a receiver</a>
+### <a name="no5-7">5.7.Do not refer to `static` variable that stores the instance as a receiver</a>
 
 Usually, for referencing a `static` variable, code is written with class name as a receiver.
 
@@ -707,7 +707,7 @@ The required exception classes shall be provided by the framework and the applic
 
 If it is required to create an exception class, consult the architect.
 
-### <a name="no5-9">5.9.Do not generate and throw instance of java.lang.Exception class</a>
+### <a name="no5-9">5.9.Do not generate and throw instance of `java.lang.Exception` class</a>
 
 To explicitly throw an exception, do not just create an instance of the `java.lang.Exception` class.
 Create an instance of an exception class that is in line with the business application system design and then throw the exception.
@@ -730,7 +730,7 @@ if (items.isEmpty()) {
 }
 ```
 
-### <a name="no5-10">5.10.Do not use try-catch statement for conditional branching</a>
+### <a name="no5-10">5.10.Do not use `try-catch` statement for conditional branching</a>
 
 `try-catch` statement is used for handling exceptions.
 Use `if` statement to perform conditional branching.
@@ -1151,7 +1151,7 @@ The easiest way to split is to slice each cluster into a `private` method.
 
 Do not create too many method arguments.
 
-### <a name="no6-8">6.8.Do not create too many inner classes, static nested classes, or anonymous classes</a>
+### <a name="no6-8">6.8.Do not create too many inner classes, `static` nested classes, or anonymous classes</a>
 
 Although the use of inner classes and `static` nested classes or anonymous classes is not explicitly prohibited, creating too many of these classes will make the code less readable.
 
@@ -1304,7 +1304,7 @@ Request/consult with the architect to add shared components for functions with i
 By performing file input and output using shared components, character codes and new line codes can be handled consistently.
 Also, directory traversal can be prevented by checking the requested file path in shared components.
 
-### <a name="no6-16">6.16.Use try-with-resources syntax when resources are required to be closed</a>
+### <a name="no6-16">6.16.Use `try-with-resources` syntax when resources are required to be closed</a>
 
 For Objects that use external resources such as `java.io.InputStream` and `java.io.OutputStream`, use the `try-with-resources` syntax so that there are no omissions of close.
 
@@ -1364,7 +1364,7 @@ The types and release range of access modifiers are shown below.
 
 Do not use `public` for declaration without good reason and grant an access modifier to a narrow range if required.
 
-### <a name="no7-2">7.2.As a general rule, make instance variable private</a>
+### <a name="no7-2">7.2.As a general rule, make instance variable `private`</a>
 
 Instance variable should not be exposed outside the class.
 As a general rule, make the instance variable `private`.
@@ -1434,7 +1434,7 @@ callOtherMethod();
 return;
 ```
 
-### <a name="no7-4">7.4.Avoid re-assignment as far as possible and use final</a>
+### <a name="no7-4">7.4.Avoid re-assignment as far as possible and use `final`</a>
 
 The less "changeable state" the code is in, the easier it is to grasp and understand.
 
@@ -1492,7 +1492,7 @@ public BigDecimal calculateTax(final Item item) {
 If it is a `private` method, it is closed within the class, hence the impact range is limited. However, it is recommended not to change the argument state as much as possible in methods that are made public outside of the class, such as `public` and `protected`.
 
 
-### <a name="no7-6">7.6.For using null as return value, consider the use of optional</a>
+### <a name="no7-6">7.6.For using `null` as return value, consider the use of `optional`</a>
 
 There is a method of using `null` as a means to represent the state where the value is "No", and there is a method by using `java.util.Optional` introduced in Java 8.
 
@@ -1633,7 +1633,7 @@ final double average = tempAge / tempSize;
 
 Though not always simple, since the code readability and comprehension are subjective and not mandatory, consider using the Stream API when processing collections.
 
-### <a name="no7-9">7.9.For process involving check exceptions throw, implement extended for syntax and not Stream API</a>
+### <a name="no7-9">7.9.For process involving check exceptions throw, implement extended `for` syntax and not Stream API</a>
 
 Although the Stream API can write the collection operation simply, `try-catch` must be written in the lambda expression when calling a method that has been declared to throw a check exception.
 The Stream API, which can be written in a simple form, becomes complicated due to `try-catch`.
@@ -1672,7 +1672,7 @@ for (Path file : files) {
 }
 ```
 
-### <a name="no7-10">7.10. Avoid using legacy for statement and consider using Stream API or extended for statement</a>
+### <a name="no7-10">7.10. Avoid using legacy `for` statement and consider using Stream API or extended `for` statement</a>
 
 Since the Stream API and extended `for` statement can be used to process the collection elements sequentially, there is usually no situation where the legacy `for` statement is used.
 Avoid using the legacy `for` statement as much as possible.
@@ -1719,7 +1719,7 @@ final Item[] copied = Arrays.stream(values)
         .toArray(Item[]::new);
 ```
 
-### <a name="no7-12">7.12.Use the toArray method when converting collection to array</a>
+### <a name="no7-12">7.12.Use the `toArray` method when converting collection to array</a>
 
 The `toArray` method is available in a collection to convert it to an array.
 Use the `toArray` method instead of looping each element to create an array.
@@ -1748,7 +1748,7 @@ In this code example, the array that is passed to the `toArray` method is initia
 Although it is also possible to initialize the `size` method of the original collection by specifying the length, there is almost no difference in performance.
 Hence any initialization method can be selected, although in this code example for these conventions, it has been initialized with a length of `0` in consideration of readability.
 
-### <a name="no7-13">7.13.Use Arrays.asList or List.of when converting an array to collection</a>
+### <a name="no7-13">7.13.Use `Arrays.asList` or `List.of` when converting an array to collection</a>
 
 The array utility `java.util.Arrays` class has the `asList` method that converts it to a list.
 Use the `asList` method of the `java.util.Arrays` class instead of looping each element to create a list.
@@ -1791,7 +1791,7 @@ final Set<Item> items =  Arrays.stream(itemArray).collect(Collectors.toSet());
 final Set<Item> items = Set.of(itemArray);
 ```
 
-### <a name="no7-14">7.14.Add @Override to methods when overriding method and implementing abstract method</a>
+### <a name="no7-14">7.14.Add `@Override` to methods when overriding method and implementing abstract method</a>
 
 When overriding the super class method in the sub class, add `@Override` to the method on the subclass side.
 When `@Override` is added, the compiler checks if the method is really overridden.
