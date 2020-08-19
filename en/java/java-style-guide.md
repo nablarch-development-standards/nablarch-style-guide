@@ -64,8 +64,8 @@
   - [7.6.For using null as return value, consider the use of optional](#no7-6)
   - [7.7.Bind the appropriate type when using the class that captures type parameters such as collection](#no7-7)
   - [7.8.Consider writing the collection operations concisely using the Stream API](#no7-8)
-  - [7.9.For process involving check exceptions throw, implement extended for syntax and not Stream API](#no7-9)
-  - [7.10.Avoid using legacy for statement and consider using Stream API or extended for statement](#no7-10)
+  - [7.9.For process involving check exceptions throw, implement enhanced for statement and not Stream API](#no7-9)
+  - [7.10.Avoid using legacy for statement and consider using Stream API or enhanced for statement](#no7-10)
   - [7.11.Use clone method to copy the whole array](#no7-11)
   - [7.12.Use the toArray method when converting collection to array](#no7-12)
   - [7.13.Use Arrays.asList or List.of when converting an array to collection](#no7-13)
@@ -1594,7 +1594,7 @@ Hence, it is easy to understand what process is required for each element.
 
 For other methods, check [`java.util.stream.Stream`のJavadoc](https://docs.oracle.com/javase/jp/10/docs/api/java/util/stream/Stream.html).
 
-A code example that uses Stream API and a code example that uses the extended for statement are shown below.
+A code example that uses Stream API and a code example that uses the enhanced for statement are shown below.
 In both cases, the average age is calculated from the list of employees by narrowing the list down to only those employees whose job type is programmer.
 
 It is easier to understand what kind of process is stacked to obtain the result in the code example using the Stream API.
@@ -1614,7 +1614,7 @@ final double average = statistics.getAverage();
 ```
 
 ```java
-//Code example that uses the extended for syntax
+//Code example that uses the enhanced for statement
 final List<Employee> employees = ...
 double tempAge = 0;
 int tempSize = 0;
@@ -1633,14 +1633,14 @@ final double average = tempAge / tempSize;
 
 Though not always simple, since the code readability and comprehension are subjective and not mandatory, consider using the Stream API when processing collections.
 
-### <a name="no7-9">7.9.For process involving check exceptions throw, implement extended `for` syntax and not Stream API</a>
+### <a name="no7-9">7.9.For process involving check exceptions throw, implement enhanced `for` statement and not Stream API</a>
 
 Although the Stream API can write the collection operation simply, `try-catch` must be written in the lambda expression when calling a method that has been declared to throw a check exception.
 The Stream API, which can be written in a simple form, becomes complicated due to `try-catch`.
-Hence, use the extended `for` statement when an operation that involves throwing a check exception is included.
+Hence, use the enhanced `for` statement when an operation that involves throwing a check exception is included.
 
 `java.io.IOException` is often thrown during file input and output.
-Using the extended `for` statement is recommended when processing files with the collection operation.
+Using the enhanced `for` statement is recommended when processing files with the collection operation.
 
 ```java
 //Not Okay
@@ -1672,9 +1672,9 @@ for (Path file : files) {
 }
 ```
 
-### <a name="no7-10">7.10. Avoid using legacy `for` statement and consider using Stream API or extended `for` statement</a>
+### <a name="no7-10">7.10. Avoid using legacy `for` statement and consider using Stream API or enhanced `for` statement</a>
 
-Since the Stream API and extended `for` statement can be used to process the collection elements sequentially, there is usually no situation where the legacy `for` statement is used.
+Since the Stream API and enhanced `for` statement can be used to process the collection elements sequentially, there is usually no situation where the legacy `for` statement is used.
 Avoid using the legacy `for` statement as much as possible.
 
 ### <a name="no7-11">7.11.Use `clone`method to copy the whole array</a>
