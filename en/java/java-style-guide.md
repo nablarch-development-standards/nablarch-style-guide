@@ -1677,7 +1677,7 @@ for (Path file : files) {
 Since the Stream API and extended `for` statement can be used to process the collection elements sequentially, there is usually no situation where the legacy `for` statement is used.
 Avoid using the legacy `for` statement as much as possible.
 
-### <a name="no7-11">7.11.Use clone method to copy the whole array</a>
+### <a name="no7-11">7.11.Use `clone`method to copy the whole array</a>
 
 The simplest method to copy the whole array is using the `clone` method.
 
