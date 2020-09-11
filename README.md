@@ -10,8 +10,7 @@
 
 ## ライセンス
 
-![](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)<br/>
-本リポジトリ内のドキュメントは[クリエイティブ・コモンズ 表示 - 継承 4.0 国際 ライセンス](http://creativecommons.org/licenses/by-sa/4.0/)の下に提供されています。
+本コンテンツは<a href="https://fintan.jp/?page_id=201">Fintan コンテンツ 使用許諾条項</a>に準拠しています。
 
 また次に示すファイルやサンプルプロジェクトは [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) の下に提供されています。
 
