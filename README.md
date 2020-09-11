@@ -10,7 +10,7 @@
 
 ## ライセンス
 
-本コンテンツは<a href="https://fintan.jp/?page_id=201">Fintan コンテンツ 使用許諾条項</a>に準拠しています。
+本リポジトリ内のドキュメントは<a href="https://fintan.jp/?page_id=201">Fintan コンテンツ 使用許諾条項</a>の下に提供されています。
 
 また次に示すファイルやサンプルプロジェクトは [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) の下に提供されています。
 
