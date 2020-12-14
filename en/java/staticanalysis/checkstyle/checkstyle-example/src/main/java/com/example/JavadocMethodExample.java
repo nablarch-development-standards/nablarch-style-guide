@@ -11,10 +11,6 @@ package com.example;
  */
 public class JavadocMethodExample {
 
-    public void noJavadocComment() {  // No javadoc comment (incorrect).
-
-    }
-
     /**
      * Double the assigned number.
      *
