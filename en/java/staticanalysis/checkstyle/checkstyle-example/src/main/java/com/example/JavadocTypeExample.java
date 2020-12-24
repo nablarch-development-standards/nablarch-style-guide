@@ -13,8 +13,6 @@ package com.example;
 public class JavadocTypeExample<T> {
 }
 
-class NgJavadocTypeExample1 { // No javadoc comment (NG).
-}
 
 /**
  * There is a Javadoc comment but @param (type parameter T) is missing (incorrect).
