@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 3.0 (2020-03-31)
+
+- Add a user guide for Find Security Bugs
+ 
 ## 2.0 (2020-03-31)
 
 - Add ArchUnit guide
