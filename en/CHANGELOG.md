@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 3.0 (2020-03-31)
+## 3.0 (2021-03-31)
 
 - Add a user guide for Find Security Bugs
  
