@@ -1,5 +1,13 @@
 # CHANGELOG
 
+
+## 3.1 (2022-03-31)
+
+- SpotBugs maven plugin version upgraded to 4.5.0.0.
+  This is to increase the number of detectable bugs by keeping up with the latest version.
+  (SpotBugs4.X also experimentally supports Java 11 and newer.)
+- Replaced with the unpublised API checker that is compatible with SpotBugs 4.X.
+
 ## 3.0 (2021-03-31)
 
 - Add a user guide for Find Security Bugs
