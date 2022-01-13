@@ -227,7 +227,7 @@ Select `nablarch-unpublished-api-checker-<version>.jar`.
 
 `nablarch-unpublished-api-checker-<version>.jar` should be stored in the local repository of Maven. 
 The local repository of Maven is the `.m2\repository` directory under the home directory.
-※If you don't have `nablarch-unpublished-api-checker-<version>.jar` in your local repository, please [Run using Maven](#Run using Maven) first.
+※If you don't have `nablarch-unpublished-api-checker-<version>.jar` in your local repository, please [Run using Maven](#run-using-maven) first.
 
 ![](./assets/add-spotbugs-eclipse-plugin.png)
 
