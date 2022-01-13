@@ -227,6 +227,7 @@ Eclipseの設定からSpotBugsの項目を開いてください。
 
 `nablarch-unpublished-api-checker-<version>.jar`はMavenのローカルリポジトリに格納されているはずです。
 Mavenのローカルリポジトリはホームディレクトリ以下の`.m2\repository`ディレクトリです。
+※ローカルリポジトリに`nablarch-unpublished-api-checker-<version>.jar`が存在しない場合は、先に[Mavenを使用して実行](#Mavenを使用して実行)してください。
 
 ![](./assets/add-spotbugs-eclipse-plugin.png)
 
