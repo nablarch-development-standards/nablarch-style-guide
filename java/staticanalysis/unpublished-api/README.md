@@ -237,6 +237,8 @@ Eclipseホームディレクトリにある、`eclipse.ini`ファイルを修正
 
 次の例のように、`-vmargs`の下に`-Dnablarch-findbugs-config=<テストコード用設定ファイルディレクトリの絶対パス>`を記述してください。
 
+※<テストコード用設定ファイルディレクトリの絶対パス>に全角文字が含まれる場合バグチェックに失敗することがあります。パスに全角文字が含まれないようにしてください。
+
 ```
 -vmargs
 -Dnablarch-findbugs-config=C:/nablarch/workspace/example/spotbugs/published-config/production
