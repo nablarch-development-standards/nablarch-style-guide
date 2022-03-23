@@ -222,11 +222,12 @@ eclipse marketplaceからSpotBugs Eclipse pluginをインストールしてく�
 
 Eclipseの設定からSpotBugsの項目を開いてください。
 
-「Plugin and misc. Settings」タブを開いて「追加」ボタンを押してください。
-`nablarch-testing-<version>.jar`を選択してください。
+「プラグインおよびその他の設定」タブを開いて「追加」ボタンを押してください。
+`nablarch-unpublished-api-checker-<version>.jar`を選択してください。
 
-`nablarch-testing-<version>.jar`はMavenのローカルリポジトリに格納されているはずです。
+`nablarch-unpublished-api-checker-<version>.jar`はMavenのローカルリポジトリに格納されているはずです。
 Mavenのローカルリポジトリはホームディレクトリ以下の`.m2\repository`ディレクトリです。
+※ローカルリポジトリに`nablarch-unpublished-api-checker-<version>.jar`が存在しない場合は、先に[Mavenを使用して実行](#Mavenを使用して実行)してください。
 
 ![](./assets/add-spotbugs-eclipse-plugin.png)
 
@@ -235,6 +236,8 @@ Mavenのローカルリポジトリはホームディレクトリ以下の`.m2\r
 Eclipseホームディレクトリにある、`eclipse.ini`ファイルを修正します。
 
 次の例のように、`-vmargs`の下に`-Dnablarch-findbugs-config=<テストコード用設定ファイルディレクトリの絶対パス>`を記述してください。
+
+※<テストコード用設定ファイルディレクトリの絶対パス>に全角文字が含まれる場合バグチェックに失敗することがあります。パスに全角文字が含まれないようにしてください。
 
 ```
 -vmargs
