@@ -10,7 +10,7 @@ This repository provides coding conventions for Java and other languages, and an
 
 ## License
 
-The documents in this repository are provided under the <a href="https://fintan.jp/?page_id=5803&lang=en"> Fintan Content License Terms And Conditions</a>.
+The documents in this repository are provided under the <a href="https://fintan.jp/en/page/1890/"> Fintan Content License Terms And Conditions</a>.
 
 The following files and sample projects are provided under the [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt). 
 

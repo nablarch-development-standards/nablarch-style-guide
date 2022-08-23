@@ -10,13 +10,11 @@ ArchUnitでチェックできる内容については[ArchUnit User Guide -> Wha
 
 ### 基本となる形式
 
-非常によく使用する形式として
+以下の形式が基本となります。
 
 ```
 classes that ${PREDICATE} should ${CONDITION}
 ```
-
-のように記載します。
 
 これは `${PREDICATE}` であるクラスが `${CONDITION}` となることをチェックします。
 
@@ -45,7 +43,7 @@ public class ActionRuleTest {
 
 #### 注意事項
 
-このルールはクラス名の末尾が `Action` であるのものに対して、チェックを行います。
+このルールはクラス名の末尾が `Action` であるものに対して、チェックを行います。
 
 クラス名の末尾が `Action` でなければ、当然チェック対象になりません。
 
