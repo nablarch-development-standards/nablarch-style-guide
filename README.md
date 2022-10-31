@@ -1,3 +1,9 @@
+# 本リポジトリは移転しました
+
+本リポジトリで公開するスタイルガイドは、Nablarch依存部分は少なく他のフレームワークでも流用いただける内容となっています。より多くの方にご利用いただくため2022年10月、以下のリポジトリに移転しました。今後、本リポジトリはメンテナンスされませんので移転先をご参照ください。
+
+<https://github.com/Fintan-contents/coding-standards>
+
 # Nablarchスタイルガイド
 
 本リポジトリではJavaをはじめとする各言語のコーディング規約と、Checkstyle・SpotBugsといった静的解析ツールの導入ガイドを提供します。
@@ -10,7 +16,7 @@
 
 ## ライセンス
 
-本リポジトリ内のドキュメントは<a href="https://fintan.jp/?page_id=201">Fintan コンテンツ 使用許諾条項</a>の下に提供されています。
+本リポジトリ内のドキュメントは<a href="https://fintan.jp/page/295/">Fintan コンテンツ 使用許諾条項</a>の下に提供されています。
 
 また次に示すファイルやサンプルプロジェクトは [Apache License Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt) の下に提供されています。
 
